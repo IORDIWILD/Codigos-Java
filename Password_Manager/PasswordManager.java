@@ -29,7 +29,7 @@ public PasswordManager cargarArchivo(PasswordManager e){
         String linea;
         while((linea = bf.readLine()) != null){
             String [] bfPassword = linea.split("\\|");
-            passwordList.add(new PasswordEntry(bfPassword[0], bfPassword[1], bfPassword[2], bfPassword[3]));
+            e.addPassword(new PasswordEntry(bfPassword[0], bfPassword[1], bfPassword[2], bfPassword[3]));;
         }
         return e;
     }

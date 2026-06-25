@@ -20,7 +20,8 @@ System.out.println("2. Mostrar todas");
 System.out.println("3. Borrar Password");
 System.out.println("4. Modificar Password");
 System.out.println("5. Guardar Password");
-System.out.println("6. Salir");
+System.out.println("6. Cargar Password");
+System.out.println("7. Salir");
 System.out.print("Seleccione una opción: ");
 
 menu_case= in.nextInt();
@@ -126,7 +127,13 @@ case 5:{
     manager.guardarArchivo();
     break;
 }
-case 6:{    
+case 6:{
+
+    manager = manager.cargarArchivo(manager);
+    break;
+
+}
+case 7:{    
 
     menu = false;
     break;
